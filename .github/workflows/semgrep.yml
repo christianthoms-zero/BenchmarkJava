@@ -22,7 +22,7 @@ jobs:
       - name: Build Dependency Tree
         run: mvn dependency:tree -DoutputFile=maven_dep_tree.txt
       - name: Upload Dependency Tree Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mavendeptree
           path: maven_dep_tree.txt
