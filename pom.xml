@@ -614,6 +614,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
         <!-- mvn dependency:analyze says this is an unused declared dependency, but its wrong. I think the webapp needs it somehow. -->
         <dependency>
             <groupId>com.sun.jersey</groupId>

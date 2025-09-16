@@ -1,6 +1,9 @@
 package org.owasp.benchmark;
 
+import org.apache.pdfbox.pdmodel.PDDocument;
+
 import javax.net.ssl.SSLContext;
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
@@ -18,4 +21,14 @@ public class Foo {
     public SSLContext getSSLContext2() throws NoSuchAlgorithmException {
         return SSLContext.getInstance("TLSv1.1");
     }
+
+    public void createPDF() throws IOException, NoSuchAlgorithmException {
+        PDDocument document = new PDDocument();
+        document.save("/tmp/foo.pdf");
+        document.close();
+        SSLContext.getInstance("TLSv1.3");
+        String tPassword = "foobar";
+
+    }
+
 }
