@@ -15,7 +15,7 @@ public class Foo {
         random.nextBytes(randomBytes);
         return randomBytes;
     }
-    public void getSSLContext2() throws NoSuchAlgorithmException {
-        SSLContext.getInstance("TLSv1.1");
+    public SSLContext getSSLContext2() throws NoSuchAlgorithmException {
+        return SSLContext.getInstance("TLSv1.1");
     }
 }
